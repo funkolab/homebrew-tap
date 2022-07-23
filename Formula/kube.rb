@@ -5,20 +5,20 @@
 class Kube < Formula
   desc "CLI tools to manage your kubeconfig file !"
   homepage "https://github.com/funkolab/kube"
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/kube/releases/download/v0.2.1/kube_v0.2.1_darwin_arm64.tar.gz"
-      sha256 "40393aacaf4f9f15092624216d615ff601236da300589f8f276112eec7fcd196"
+      url "https://github.com/funkolab/kube/releases/download/v0.3.0/kube_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "c79bc7a4f8a4850e8beb762c9e7b68e4eb25e8ea4a6de2a2aa90a012455da51c"
 
       def install
         bin.install "kube"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.2.1/kube_v0.2.1_darwin_amd64.tar.gz"
-      sha256 "d0b90b649d9b1fd1fe8f8bb38e0e944700cded12b3981a1dce690d4bb3965187"
+      url "https://github.com/funkolab/kube/releases/download/v0.3.0/kube_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "6b4fc5b192e613b7a4b971859b2dd572e85c361727f2b604efbcd3e339fdb0b9"
 
       def install
         bin.install "kube"
@@ -28,16 +28,16 @@ class Kube < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.2.1/kube_v0.2.1_linux_amd64.tar.gz"
-      sha256 "213e80349b10103fd69c5d8ca9518b7a32af6ff6183f9b9c85e75ab1ec90d95c"
+      url "https://github.com/funkolab/kube/releases/download/v0.3.0/kube_v0.3.0_linux_amd64.tar.gz"
+      sha256 "02c25723918cd6710963648b4024f2c122aefbeec289555791fe91b2c1f50f28"
 
       def install
         bin.install "kube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/kube/releases/download/v0.2.1/kube_v0.2.1_linux_arm64.tar.gz"
-      sha256 "5ce54d203d41127c7479c7dc910f13479d5dd4519ce032117a3ab73d19106582"
+      url "https://github.com/funkolab/kube/releases/download/v0.3.0/kube_v0.3.0_linux_arm64.tar.gz"
+      sha256 "479f83480fb86c46c79938b666e1d8efc3ca5296aeb3616bf81aa7f3064fb973"
 
       def install
         bin.install "kube"
