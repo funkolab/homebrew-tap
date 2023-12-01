@@ -5,20 +5,20 @@
 class Kube < Formula
   desc "CLI tools to manage your kubeconfig file !"
   homepage "https://github.com/funkolab/kube"
-  version "0.4.6"
+  version "0.4.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.6/kube_v0.4.6_darwin_arm64.tar.gz"
-      sha256 "2e9bbfeb5b7e518cbc53bbd2c280d6bb97e8e986740a8389b3c599d3675ad47d"
+      url "https://github.com/funkolab/kube/releases/download/v0.4.7/kube_v0.4.7_darwin_arm64.tar.gz"
+      sha256 "fee75fe9028f0a71f68094cb09ba502d6d3b737cb4e8bc9bcdf66f8e62f7b4c0"
 
       def install
         bin.install "kube"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.6/kube_v0.4.6_darwin_amd64.tar.gz"
-      sha256 "0db9e3225b6b574d560b43dc6aea605326c1194d8126e2dcbf4e12f22d8f7ef3"
+      url "https://github.com/funkolab/kube/releases/download/v0.4.7/kube_v0.4.7_darwin_amd64.tar.gz"
+      sha256 "bf982ae5aa0015a35281c731ff6796c14ab147475a88b82571ea6d1be9b6d356"
 
       def install
         bin.install "kube"
@@ -27,17 +27,17 @@ class Kube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.6/kube_v0.4.6_linux_amd64.tar.gz"
-      sha256 "1b318010c6d12e679a45c06a9c7ad3ef716e8277c77c1a9bacff005cb99e5a82"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/funkolab/kube/releases/download/v0.4.7/kube_v0.4.7_linux_arm64.tar.gz"
+      sha256 "4095bd0720da37a261e0144bc6055c115d39c62e83c8cb06dbb01d1bc1bb1fa7"
 
       def install
         bin.install "kube"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.6/kube_v0.4.6_linux_arm64.tar.gz"
-      sha256 "10c1e1c2aa97c828505bbda7154dbfc5724659b373fe298a1d6ddadd4b655709"
+    if Hardware::CPU.intel?
+      url "https://github.com/funkolab/kube/releases/download/v0.4.7/kube_v0.4.7_linux_amd64.tar.gz"
+      sha256 "9ab9990141c5feb9cf979c14160ca12fdaf0370ba7eaa7970e6f84d5449baaf5"
 
       def install
         bin.install "kube"
