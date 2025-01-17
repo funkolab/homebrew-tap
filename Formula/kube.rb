@@ -5,20 +5,20 @@
 class Kube < Formula
   desc "CLI tools to manage your kubeconfig file !"
   homepage "https://github.com/funkolab/kube"
-  version "0.4.9"
+  version "0.4.10"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.9/kube_v0.4.9_darwin_arm64.tar.gz"
-      sha256 "7269cdf7242e7750a6be80b6f33da1438a83178a8d0e9fb25be8b0bf29184fbd"
+    on_intel do
+      url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_darwin_amd64.tar.gz"
+      sha256 "ac3b96f0a2c454362eca185b00b8f2342007173103945ccdca2b228bedbe1cda"
 
       def install
         bin.install "kube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.9/kube_v0.4.9_darwin_amd64.tar.gz"
-      sha256 "67c48ad7cdad783c790aac060435b0afe7b71d0775597b271b1b247d7387412d"
+    on_arm do
+      url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_darwin_arm64.tar.gz"
+      sha256 "827e0c5c6b2a028caac164baf7cf3a4164aa0e3fef84894d28609e50fe750d97"
 
       def install
         bin.install "kube"
@@ -27,20 +27,24 @@ class Kube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.9/kube_v0.4.9_linux_arm64.tar.gz"
-      sha256 "6f68e5c0b68debecc68d7f8360f79368bc4793ce7b2a48abb2247926f3918c23"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_linux_amd64.tar.gz"
+        sha256 "43454177b826dc2cb79f179d005c13ea35ae93916003c382607fd5e26dd1c37b"
 
-      def install
-        bin.install "kube"
+        def install
+          bin.install "kube"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/funkolab/kube/releases/download/v0.4.9/kube_v0.4.9_linux_amd64.tar.gz"
-      sha256 "8e610083eeb7c9704b322ff99bce07b91dff567bfa7eb0f7e40f45d4cffc6436"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_linux_arm64.tar.gz"
+        sha256 "f289fbc93ca16c6799d1a2966a0fd127ca52143aba5b5c700f8a161700b9efed"
 
-      def install
-        bin.install "kube"
+        def install
+          bin.install "kube"
+        end
       end
     end
   end
