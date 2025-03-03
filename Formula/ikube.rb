@@ -5,20 +5,20 @@
 class Ikube < Formula
   desc "CLI tools to manage your kubeconfig file using infisical !"
   homepage "https://github.com/funkolab/ikube"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/ikube/releases/download/v0.1.3/ikube_v0.1.3_darwin_amd64.tar.gz"
-      sha256 "10a6d3d2258184d9bf8f4a2d75f7e992b548559f3ddc90cc60bea6a8fa36ad75"
+      url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_darwin_amd64.tar.gz"
+      sha256 "46ef519211be3c7f2950ac1ed4fa50e7bb5234e39d983e40e100ff1e58bdfdaf"
 
       def install
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/ikube/releases/download/v0.1.3/ikube_v0.1.3_darwin_arm64.tar.gz"
-      sha256 "5a32dadb50de19bc66390fcd9ad8b372858bac4bb408ccda43f110505056a1fe"
+      url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_darwin_arm64.tar.gz"
+      sha256 "342fd178feb7327a36ccba3db8dcc76e2bfb646a6a75c6a58eb42793612fdd2c"
 
       def install
         bin.install "ikube"
@@ -29,8 +29,8 @@ class Ikube < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/ikube/releases/download/v0.1.3/ikube_v0.1.3_linux_amd64.tar.gz"
-        sha256 "d818a820f557559268add7dbf63be5c2e49261a03ba7694a0633b974856e9494"
+        url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_linux_amd64.tar.gz"
+        sha256 "400299ddbf6932f8a7117338a511faae3efc4a8f7bdfc1e92ca98c9941f55c13"
 
         def install
           bin.install "ikube"
@@ -39,8 +39,8 @@ class Ikube < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/ikube/releases/download/v0.1.3/ikube_v0.1.3_linux_arm64.tar.gz"
-        sha256 "4de880b4443ac2df79b1c124594108f7323a1d3a7b699389d163fda8e5a7c858"
+        url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_linux_arm64.tar.gz"
+        sha256 "bd0d1abed55549604653dadee67c347eb76b1080c7a81a80d3c9dd20e0d16a83"
 
         def install
           bin.install "ikube"
