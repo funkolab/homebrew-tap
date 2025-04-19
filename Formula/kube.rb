@@ -5,20 +5,20 @@
 class Kube < Formula
   desc "CLI tools to manage your kubeconfig file !"
   homepage "https://github.com/funkolab/kube"
-  version "0.4.10"
+  version "0.4.11"
 
   on_macos do
     on_intel do
-      url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_darwin_amd64.tar.gz"
-      sha256 "ac3b96f0a2c454362eca185b00b8f2342007173103945ccdca2b228bedbe1cda"
+      url "https://github.com/funkolab/kube/releases/download/v0.4.11/kube_v0.4.11_darwin_amd64.tar.gz"
+      sha256 "a06a91bf0a7b5572038ebae1d175ccd305f08ec7c7011790519b7cbea9a23c69"
 
       def install
         bin.install "kube"
       end
     end
     on_arm do
-      url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_darwin_arm64.tar.gz"
-      sha256 "827e0c5c6b2a028caac164baf7cf3a4164aa0e3fef84894d28609e50fe750d97"
+      url "https://github.com/funkolab/kube/releases/download/v0.4.11/kube_v0.4.11_darwin_arm64.tar.gz"
+      sha256 "6df24769160dddeb062b67c1ab8afbaf8b031d435eb2df2bfdcfe7a7f9897232"
 
       def install
         bin.install "kube"
@@ -29,8 +29,8 @@ class Kube < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_linux_amd64.tar.gz"
-        sha256 "43454177b826dc2cb79f179d005c13ea35ae93916003c382607fd5e26dd1c37b"
+        url "https://github.com/funkolab/kube/releases/download/v0.4.11/kube_v0.4.11_linux_amd64.tar.gz"
+        sha256 "826e5f7eb1218c32aa562c10ef2a5804fbc03d4fd858b360ebe793bd503611b7"
 
         def install
           bin.install "kube"
@@ -39,8 +39,8 @@ class Kube < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/kube/releases/download/v0.4.10/kube_v0.4.10_linux_arm64.tar.gz"
-        sha256 "f289fbc93ca16c6799d1a2966a0fd127ca52143aba5b5c700f8a161700b9efed"
+        url "https://github.com/funkolab/kube/releases/download/v0.4.11/kube_v0.4.11_linux_arm64.tar.gz"
+        sha256 "9dfa8fdccd873dcf93e853c805c8f0ac0136611582402f36bc2b6207ddc7310b"
 
         def install
           bin.install "kube"
