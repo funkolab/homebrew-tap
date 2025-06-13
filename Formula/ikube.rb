@@ -5,20 +5,20 @@
 class Ikube < Formula
   desc "CLI tools to manage your kubeconfig file using infisical !"
   homepage "https://github.com/funkolab/ikube"
-  version "0.1.4"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_darwin_amd64.tar.gz"
-      sha256 "46ef519211be3c7f2950ac1ed4fa50e7bb5234e39d983e40e100ff1e58bdfdaf"
+      url "https://github.com/funkolab/ikube/releases/download/v0.2.0/ikube_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "558d3674c4e919ff49dd1f1493e96b0714e7893ecf1f2fd346649873b86262de"
 
       def install
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_darwin_arm64.tar.gz"
-      sha256 "342fd178feb7327a36ccba3db8dcc76e2bfb646a6a75c6a58eb42793612fdd2c"
+      url "https://github.com/funkolab/ikube/releases/download/v0.2.0/ikube_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "9be4dd944a035acacb2e91753fa6c1b7af3b75bdc7e2128d439ca2e57975df5f"
 
       def install
         bin.install "ikube"
@@ -27,24 +27,18 @@ class Ikube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_linux_amd64.tar.gz"
-        sha256 "400299ddbf6932f8a7117338a511faae3efc4a8f7bdfc1e92ca98c9941f55c13"
-
-        def install
-          bin.install "ikube"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/funkolab/ikube/releases/download/v0.2.0/ikube_v0.2.0_linux_amd64.tar.gz"
+      sha256 "ae904a0a066f067203988a64e4b5839acebccbc7e5562454f60f96c4c5580228"
+      def install
+        bin.install "ikube"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/funkolab/ikube/releases/download/v0.1.4/ikube_v0.1.4_linux_arm64.tar.gz"
-        sha256 "bd0d1abed55549604653dadee67c347eb76b1080c7a81a80d3c9dd20e0d16a83"
-
-        def install
-          bin.install "ikube"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/funkolab/ikube/releases/download/v0.2.0/ikube_v0.2.0_linux_arm64.tar.gz"
+      sha256 "b719a2511730131c04e829723b8856776fd77f9fc0c3b97d3f92c12754f650b4"
+      def install
+        bin.install "ikube"
       end
     end
   end
