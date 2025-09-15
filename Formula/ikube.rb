@@ -5,20 +5,20 @@
 class Ikube < Formula
   desc "CLI tools to manage your kubeconfig file using infisical !"
   homepage "https://github.com/funkolab/ikube"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/ikube/releases/download/v0.3.0/ikube_v0.3.0_darwin_amd64.tar.gz"
-      sha256 "57a18b93345f99fa466670acfdc1391ee835e011e193b41f40cecf4aefabc612"
+      url "https://github.com/funkolab/ikube/releases/download/v0.3.1/ikube_v0.3.1_darwin_amd64.tar.gz"
+      sha256 "e07fd6c93b9c33489516d3757b637f2a598378351ca54e16b8f7a554272db84e"
 
       def install
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/ikube/releases/download/v0.3.0/ikube_v0.3.0_darwin_arm64.tar.gz"
-      sha256 "1b6b4ab4f46a1e85c1672d3457aad6f895f19498364395bc683e2a574382be35"
+      url "https://github.com/funkolab/ikube/releases/download/v0.3.1/ikube_v0.3.1_darwin_arm64.tar.gz"
+      sha256 "acb5218943d9583a88467080144b4a2938671b7cdf0c0594a0dbfe03c105ad7b"
 
       def install
         bin.install "ikube"
@@ -27,16 +27,16 @@ class Ikube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.3.0/ikube_v0.3.0_linux_amd64.tar.gz"
-      sha256 "96250516eb6793c82ddc11571de974c6b086f8c4642e3a3ba4c64d738a477707"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/funkolab/ikube/releases/download/v0.3.1/ikube_v0.3.1_linux_amd64.tar.gz"
+      sha256 "ab737b619defd2b3e57e66ebfab3d43d6de2bc36e6d3cc4b40d0d1631dd255db"
       def install
         bin.install "ikube"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.3.0/ikube_v0.3.0_linux_arm64.tar.gz"
-      sha256 "33f74a0c1892169c7bb0f0802226ef6d1b8b0d5181a1552b95c939f15121592a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/funkolab/ikube/releases/download/v0.3.1/ikube_v0.3.1_linux_arm64.tar.gz"
+      sha256 "33c5957986edd1d7e65e810a74ba0236390e895ebbd9158b99dfb7cefec7b2ba"
       def install
         bin.install "ikube"
       end
