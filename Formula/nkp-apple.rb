@@ -5,20 +5,20 @@
 class NkpApple < Formula
   desc "A tool to manage Nutanix NKP cluster using Apple container runtime"
   homepage "https://github.com/funkolab/nkp-apple"
-  version "0.1.0"
+  version "0.2.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/funkolab/nkp-apple/releases/download/v0.1.0/nkp-apple_v0.1.0_darwin_amd64.tar.gz"
-    sha256 "a3ef9b158346c0ca2f3c6d6cd9f8b85d13cd85e63e3072fc98921ac60d2860a3"
+    url "https://github.com/funkolab/nkp-apple/releases/download/v0.2.0/nkp-apple_v0.2.0_darwin_amd64.tar.gz"
+    sha256 "425d74b4d3cb48209a5c6403638d56bf75f82a3d34467ca897e6d1284fb8a648"
 
     def install
       bin.install "nkp-apple"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/funkolab/nkp-apple/releases/download/v0.1.0/nkp-apple_v0.1.0_darwin_arm64.tar.gz"
-    sha256 "52e72834e2cda0997a33ae5544549d86c251aedd805a775ebfad710b9e4d7b83"
+    url "https://github.com/funkolab/nkp-apple/releases/download/v0.2.0/nkp-apple_v0.2.0_darwin_arm64.tar.gz"
+    sha256 "3d54a65e164887b824dbc3f3648948d34735fe10860df0d10796f55c9f5aecb3"
 
     def install
       bin.install "nkp-apple"
