@@ -5,20 +5,20 @@
 class Ikube < Formula
   desc "CLI tools to manage your kubeconfig file using infisical !"
   homepage "https://github.com/funkolab/ikube"
-  version "0.4.2"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/ikube/releases/download/v0.4.2/ikube_v0.4.2_darwin_amd64.tar.gz"
-      sha256 "291e46e365a7d0fb38476c26136f98528a459880a8061419e01b4e038d86cbb9"
+      url "https://github.com/funkolab/ikube/releases/download/v0.5.0/ikube_v0.5.0_darwin_amd64.tar.gz"
+      sha256 "110577af5c95a4080d5715286cd54c308113eda324d622545ae6b8988a375f26"
 
       def install
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/ikube/releases/download/v0.4.2/ikube_v0.4.2_darwin_arm64.tar.gz"
-      sha256 "0b7b7edcb2dd5dbd00d350842ca34ba21445a14cb30876508a6dc22e925337ab"
+      url "https://github.com/funkolab/ikube/releases/download/v0.5.0/ikube_v0.5.0_darwin_arm64.tar.gz"
+      sha256 "a85810ddcd51a6ade23fd85ce66acb3e4b190fce6bade51162820eee887752a7"
 
       def install
         bin.install "ikube"
@@ -28,15 +28,15 @@ class Ikube < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.4.2/ikube_v0.4.2_linux_amd64.tar.gz"
-      sha256 "5df71d19f5d513a7c4acc444e363fb866be55207c5fff6e1e7b32757a8942347"
+      url "https://github.com/funkolab/ikube/releases/download/v0.5.0/ikube_v0.5.0_linux_amd64.tar.gz"
+      sha256 "1dead087bd85181b4b41d0337a1a5b2f3ae1edc098e84e7cfaad868d0c7c6ffd"
       def install
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.4.2/ikube_v0.4.2_linux_arm64.tar.gz"
-      sha256 "547ee22a0d1cf0f362cf9472473c0719c96a9dc113ec19bd1cb86e3b54d5b33f"
+      url "https://github.com/funkolab/ikube/releases/download/v0.5.0/ikube_v0.5.0_linux_arm64.tar.gz"
+      sha256 "94536278ce7b3189653e2ea1e8253bc6de05ad48e7c0caf66029a81def9ebad5"
       def install
         bin.install "ikube"
       end
