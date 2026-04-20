@@ -5,20 +5,20 @@
 class Ikube < Formula
   desc "CLI tools to manage your kubeconfig file using infisical !"
   homepage "https://github.com/funkolab/ikube"
-  version "0.6.4"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/funkolab/ikube/releases/download/v0.6.4/ikube_v0.6.4_darwin_amd64.tar.gz"
-      sha256 "47c2f793b0a9a9e8a99b16c773e68cc6051b1b39bddea3bd54887f1675231007"
+      url "https://github.com/funkolab/ikube/releases/download/v0.7.0/ikube_v0.7.0_darwin_amd64.tar.gz"
+      sha256 "cbf1d3563a6cbb5992f4d408e7825d53eb0186caf3c257205589d48dbb9cc6da"
 
       define_method(:install) do
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/funkolab/ikube/releases/download/v0.6.4/ikube_v0.6.4_darwin_arm64.tar.gz"
-      sha256 "369b5b44eb9199aa4f4431877814faa521e4c7e5dab9251673ea7c08a10b63a6"
+      url "https://github.com/funkolab/ikube/releases/download/v0.7.0/ikube_v0.7.0_darwin_arm64.tar.gz"
+      sha256 "8f160cb72ec9348044e57fb8a87e4868eadb1be639e395e19a5c049bec9fe925"
 
       define_method(:install) do
         bin.install "ikube"
@@ -28,15 +28,15 @@ class Ikube < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.6.4/ikube_v0.6.4_linux_amd64.tar.gz"
-      sha256 "7fce6a567ec52811c67e49832dce0be59c987323dfb9a8c2bd4eb562a3974e28"
+      url "https://github.com/funkolab/ikube/releases/download/v0.7.0/ikube_v0.7.0_linux_amd64.tar.gz"
+      sha256 "bb1f014f2522e2ed0c5181219e79b07d905352c08bfec4f533ea43e75d61b897"
       define_method(:install) do
         bin.install "ikube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/funkolab/ikube/releases/download/v0.6.4/ikube_v0.6.4_linux_arm64.tar.gz"
-      sha256 "0cadb9304904519d604270bc687706b8143f6c12f786a06dd2affe92c5c9afdf"
+      url "https://github.com/funkolab/ikube/releases/download/v0.7.0/ikube_v0.7.0_linux_arm64.tar.gz"
+      sha256 "0b6139acdf9926110336566c64dfd3271d30f6312394ebd40fe678a2afffd014"
       define_method(:install) do
         bin.install "ikube"
       end
